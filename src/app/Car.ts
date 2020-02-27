@@ -1,3 +1,5 @@
+import { expressionType } from '@angular/compiler/src/output/output_ast';
+
 export class Cars{
 
     //must declare as public 
@@ -14,4 +16,16 @@ export class Cars{
 
     }
    
+}
+
+export class empolyee extends Cars{
+
+    FullName:string;
+    Age:number;
+    
+    constructor(FullName:string,Age:number){
+        super("BMW",2019)
+        this.FullName=FullName;
+        this.Age=Age;
+    }
 }
