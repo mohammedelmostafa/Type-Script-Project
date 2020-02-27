@@ -8,9 +8,14 @@ import {Cars} from './Car';
 export class AppComponent {
   title = 'TypeScriptProject';
   
+  bmw:Cars
   constructor(){
     // How to call Class in TypeScript
-    new Cars(); 
+    //how to inhert class and passing parameter
+    this.bmw= new Cars("BMW",2020)
+
+    console.log("name is"+this.bmw.name)
+    console.log("Model is"+this.bmw.model)
   }
 
 }
