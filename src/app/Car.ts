@@ -4,8 +4,8 @@ export class Cars{
 
     //must declare as public 
     //classعلي مستوي ال 
-    name:string;
-    model:number;
+   public name:string;
+   public model:number;
 
     constructor(name:string,model:number){
         console.log("This is my first Class")
@@ -20,9 +20,9 @@ export class Cars{
 
 export class empolyee extends Cars{
 
-    FullName:string;
-    Age:number;
-    
+   public FullName:string;
+   public Age:number;
+
     constructor(FullName:string,Age:number){
         super("BMW",2019)
         this.FullName=FullName;
