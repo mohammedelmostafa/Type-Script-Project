@@ -53,4 +53,9 @@ export class empolyee extends Creadit{
         this.FullName=FullName;
         this.Age=Age;
     }
+
+    public GetCreaditID(){
+        super.GetCreaditID();
+        console.log("this is override function");
+    }
 }
