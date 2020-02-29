@@ -17,8 +17,10 @@ export class AppComponent {
     this.bmw= new Cars("BMW",2020)
     this.Mohammed =new empolyee("Mohammed",26)
 
-    console.log("name is"+this.bmw.name)
-    console.log("Model is"+this.bmw.model)
+    console.log("name is"+this.bmw.name);
+    console.log("Model is"+this.bmw.model);
+    console.log("Model is"+this.Mohammed.FullName);
+    console.log("Model is"+this.Mohammed.Age);
   }
 
 }
