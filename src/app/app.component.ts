@@ -21,6 +21,8 @@ export class AppComponent {
     console.log("Model is"+this.bmw.model);
     console.log("Model is"+this.Mohammed.FullName);
     console.log("Model is"+this.Mohammed.Age);
+    this.Mohammed.GetCreaditID();
+    console.log(this.Mohammed.GetCreditPass())
   }
 
 }
