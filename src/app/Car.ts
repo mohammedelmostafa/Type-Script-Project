@@ -43,15 +43,29 @@ public GetCreditPass() : number{
 
 }
 
-export class empolyee extends Creadit{
+interface CreditOP{
+    CreditLogIn(Pass:number); 
+}
 
+export class empolyee extends Creadit implements CreditOP{
+   
    public FullName:string;
    public Age:number;
 
-    constructor(FullName:string,Age:number){
-        super(1036,123456)
+    constructor(FullName:string,Age:number,CreditID:number,CreditPass:number){
+        super(CreditID,CreditPass)
         this.FullName=FullName;
         this.Age=Age;
+    }
+
+    CreditLogIn(Pass: number) {
+        if(Pass==this.GetCreditPass()){
+            console.log(this.FullName+" Login Successfully !");
+            super.GetCreaditID();
+        }
+        else
+        console.log("Incorrect Pass")
+
     }
 
     public GetCreaditID(){

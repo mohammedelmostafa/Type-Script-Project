@@ -15,7 +15,7 @@ export class AppComponent {
     // How to call Class in TypeScript
     //how to inhert class and passing parameter
     this.bmw= new Cars("BMW",2020)
-    this.Mohammed =new empolyee("Mohammed",26)
+    this.Mohammed =new empolyee("Mohammed",26,123456,123)
 
     console.log("name is"+this.bmw.name);
     console.log("Model is"+this.bmw.model);
@@ -23,6 +23,7 @@ export class AppComponent {
     console.log("Model is"+this.Mohammed.Age);
     this.Mohammed.GetCreaditID();
     console.log(this.Mohammed.GetCreditPass())
+    this.Mohammed.CreditLogIn(123);
   }
 
 }
