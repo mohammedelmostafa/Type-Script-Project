@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import {Cars} from './Car';
-import {empolyee} from './Car';
+import {Cars,empolyee,CreditOP} from './Car';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -24,6 +24,24 @@ export class AppComponent {
     this.Mohammed.GetCreaditID();
     console.log(this.Mohammed.GetCreditPass())
     this.Mohammed.CreditLogIn(123);
+    this.Mohammed.machine="ATM 2";
+    this.Login(this.Mohammed,1234)
+  }
+
+  Login(Oper1:CreditOP,pass:number){
+    switch (Oper1.machine) {
+      case "ATM 1":
+        console.log("ATM is "+Oper1.machine);
+      Oper1.CreditLogIn(pass);
+        break;
+    
+      case"ATM 2":
+      console.log("ATM is "+Oper1.machine);
+      Oper1.CreditLogIn(pass);
+        break;
+    }
+
+
   }
 
 }

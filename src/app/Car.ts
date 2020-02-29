@@ -43,12 +43,14 @@ public GetCreditPass() : number{
 
 }
 
-interface CreditOP{
-    CreditLogIn(Pass:number); 
+export interface CreditOP{
+    machine: string;
+    CreditLogIn(Pass:number);
+    
 }
 
 export class empolyee extends Creadit implements CreditOP{
-   
+    machine: string;
    public FullName:string;
    public Age:number;
 
@@ -56,6 +58,7 @@ export class empolyee extends Creadit implements CreditOP{
         super(CreditID,CreditPass)
         this.FullName=FullName;
         this.Age=Age;
+        this.machine="ATM 1";
     }
 
     CreditLogIn(Pass: number) {
